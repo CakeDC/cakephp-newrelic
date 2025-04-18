@@ -24,13 +24,15 @@
     "irc": "irc://irc.freenode.org/friendsofcake"
   },
   "require": {
-    "cakephp/cakephp": "^4.0"
+    "php": ">=8.1",
+    "ext-newrelic": "*",
+    "cakephp/cakephp": "^5.0",
   },
   "require-dev": {
-    "phpunit/phpunit": "*",
-    "cakephp/cakephp-codesniffer": "^4.0",
+    "phpunit/phpunit": "^10.5.5 || ^11.1.3",
+    "cakephp/cakephp-codesniffer": "^5.0",
     "phpstan/phpstan": "^0.12.18",
-    "psalm/phar": "~3.11.2"
+    "psalm/phar": "@stable"
   },
   "autoload": {
     "psr-4": {
@@ -46,5 +48,10 @@
   },
   "extra": {
     "installer-name": "NewRelic"
+  },
+  "config": {
+    "allow-plugins": {
+      "dealerdirect/phpcodesniffer-composer-installer": true
+    }
   }
 }
